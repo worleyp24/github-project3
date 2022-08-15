@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Find the XI</title>
+  </head>
+  <body>
+    <div class="container hidden">
+      <div class="topnav">
+        <div class="topnav-left">
+          <ul>
+            <li class="Home">Home</li>
+            <li class="startGame">Start New Game</li>
+            <li class="leaderboard">Leaderboards</li>
+            <li class="how-to-play">How-to-Play</li>
+          </ul>
+        </div>
+        <div class="topnav-right">
+          <ul>
+            <li><span class="score">0 </span><span>🎯</span></li>
+            <li><span class="remainingTime">01:00</span><span>⏳</span></li>
+            <li class="editName">
+              <span class="playerName"> Player 1</span>
+              <span>🕹️</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="video-container">
+        <video src="./Assets/Videos/button-container-bg.mp4" autoplay muted loop></video>
+      </div>
+      <h2>Choose two numbers which make <span>XI</span> in total</h2>
+      <div class="box">
+      </div>
+    </div>
+    <div class="leaderboardModal hidden">
+      <div class="leaderboardDialog">
+        <div class="leaderboardHeader">
+          <h2 class="animate-charcter">Leaderboards</h2>
+          <span>x</span>
+        </div>
+        <div class="leaderboardBody">
+          <table>
+            <thead>
+              <tr>
+                <td>Name</td>
+                <td>Score</td>
+                <td>Timestamp</td>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="HomeWindow">
+      <div class="HomeDialog">
+        <div class="HomeHeader dark fire">
+          <h1 class="Blazing" contenteditable="true">Find the  XI</h1>
+          </div>
+        </div>
+        <div class="HomeBody">
+          <span class="lets-play homebtn">Let's Play</span>
+          <br>
+          <span class="home-how-to-play homebtn">Game Mechanics</span>
+        </div>
+      </div>
+    </div>
+    <div class="overlay hidden"></div>
+
+
+    <div class="editNameModal hidden">
+      <div class="editNameDialog">
+        <div class="editNameHeader">
+          <h2 class="animate-charcter">Enter your name</h2>
+          <span>x</span>
+          </div>
+        </div>
+        <div class="editNameBody">
+          <input class="inputField" type="string" placeholder="Enter your name"/>
+          <input class="submitName" type="button" value="Submit">
+        </div>
+      </div>
+    </div>
+    <div class="overlay hidden"></div>
+
+    <div class="howToPlayModal hidden">
+      <div class="howToPlayDialog">
+        <div class="howToPlayHeader">
+          <h2 class="animate-charcter">Mechanics of the game</h2>
+          <span>x</span>
+        </div>
+        <div class="howToPlayBody">
+          <ul>
+            <li>📌 A random set of numbers is shown on the container.</li>
+            <li>📌 Choose two numbers that will have a sum of 11.</li>
+            <li>📌 If the sum of the two selected numbers is <em>equal to 11</em> , you will gain 10 points and it will be replaced with a new number.</li>
+            <li>📌 If the sum of the two selected numbers is <em>not equal to 11</em>, your remaining time will be deducted by the absolute difference of the two selected numbers.</li>
+            <li>📌You are given a 1 minute time limit.</li>
+          </ul> 
+        </div>
+      </div>
+    </div>
+    <div class="overlay hidden"></div>
+    
+    <div class="GameoverModal hidden">
+      <div class="GameoverDialog">
+        <div class="GameoverHeader">
+          <h2 class="animate-charcter">Game Over</h2>
+          <span>x</span>
+        </div>
+        <div class="GameoverBody">
+          <span class="goScore"></span>
+        </div>
+      </div>
+    </div>
+    <div class="overlay hidden"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

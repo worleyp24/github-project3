@@ -1,0 +1,364 @@
+@import url(https://fonts.google.com/specimen/Poppins?query=popp);
+*  {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  list-style-type: none;
+  text-decoration: none;
+  scroll-behavior: smooth;
+}
+
+/* TopNav CSS */
+.topnav {
+  top: 0;
+  width: 100%;
+  position: fixed;
+  background: #2C3333;
+  color: #E7F6F2;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 5px 10px;
+  z-index: 5;
+}
+
+.topnav>nav>ul{
+  width: 350px;
+  display: flex;
+  justify-content: space-evenly;
+  margin: auto;
+}
+
+.topnav>nav>ul>li{
+  color: whitesmoke;
+  padding: 3px;
+  width: 100px;
+}
+
+.topnav>nav>ul>li>a{
+  color: whitesmoke;
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.topnav>nav>ul>li::after{
+	content: '';
+	width: 0;
+	height: 2px;
+	background: linear-gradient(to right, #25aae1, #40e495, #30dd8a, #2bb673);
+  display: block;
+  margin: auto;
+	transition: 0.4s ease;
+}
+
+.topnav>nav>ul>li:hover::after{
+	width: 80%;
+}
+
+/* Task Container CSS */
+.Task-Container {
+  margin-top: 50px;
+}
+
+/* Task List CSS */
+.Task-List {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin: 0 auto;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.Task-List-Container {
+  display: flex;
+  gap: 20px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.Task-List-Container p{
+  font-size: 0.8rem;
+  font-style: italic;
+}
+
+.Task-Heading {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.Task-Heading>button {
+  width: 300px;
+  padding: 2px 0;
+}
+
+/* Routes Task List CSS */
+.Filter-Task-Container {
+  display: flex;
+  flex-direction: column;
+}
+
+.Filter-Task-Container h3 {
+  margin-bottom: 10px;
+}
+
+.Task-List-Container-Routes {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+
+/* New Task Form CSS */
+.New-Task-Form {
+  width: 300px;
+  display: flex;
+  gap: 5px;
+  margin: 10px auto;
+  padding: 10px;
+  flex-direction: column;
+  align-items: stretch;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
+}
+
+.New-Task-Form>form>label {
+  font-size: 0.8rem;
+}
+
+.New-Task-Form>form>input {
+  /* font-weight: bold; */
+  font-size: 0.8rem;
+  padding-left: 5px;
+  width: 100%;
+}
+
+.New-Task-Form>form>select {
+  margin-left: 5px;
+  padding-left: 5px;
+  font-size: 0.8rem;
+  width: 170px;
+  margin-top: 5px;
+}
+
+
+/* Edit Task Form CSS */
+.Edit-Task-Form {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  min-width: 300px;
+  background-color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+
+.Edit-Task-Form-Header {
+  display: flex;
+  align-items: center;
+  padding: 10px 0 3px 0;
+}
+
+.Edit-Task-Form-Header>input{
+font-size: 1.2rem;
+border: none;
+padding-left: 5px;
+}
+
+.Edit-Task-Form-TaskName {
+  width: 100%;
+}
+
+.Edit-Task-Form-Body {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 10px;
+  justify-content: center;
+}
+
+.Edit-Task-Form-Body-item {
+  font-size: small;
+  display: flex;
+  flex-flow: column wrap;
+  text-align: left;
+}
+
+.Edit-Task-Form-Body-item>label {
+  padding: 2px;
+}
+
+.Edit-Task-Form-Body-item select, input {
+  border: 0.1px solid;
+}
+
+.Edit-Task-Form-ModDate {
+  font-size: 0.6rem;
+  margin: 5px 0;
+  text-align: left;
+  color: #2C3333;
+}
+
+.Edit-Task-Form-Footer-Created-Date {
+  font-size: 0.7rem;
+  color:#2C3333;
+  margin-top: 10px;
+}
+
+.Date-Picker {
+  padding-left: 5px;
+  width: 100%;
+}
+
+/* overlay CSS */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(2px);
+  z-index: 5;
+}
+
+
+/* Completed Task CSS */
+.strikeThrough {
+  text-decoration: line-through;
+}
+
+
+/* General CSS */
+.App {
+  text-align: center;
+}
+
+.submit-btn {
+  border: none;
+  font-weight: 500;
+  background-color: #2bb673;
+  color: white;
+  padding: 2px;
+  transition: .2s ease-in;
+}
+
+.Edit-Task-Form-submit-btn {
+  border: none;
+  width: 150px;
+  font-weight: 500;
+  background-color: #2bb673;
+  color: white;
+  padding: 2px;
+  transition: .2s ease-in;
+}
+
+.Edit-Task-Form-cancel {
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #2C3333;
+  margin: 5px 0;
+}
+
+/* Settings that make the pen look nicer */
+
+/* @keyframes moveFocus { 
+  0%   { background-position: 0% 100% }
+  100% { background-position: 100% 0% }
+} */
+
+/* body {
+  background: none;    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin: 0;
+}
+
+main {
+  padding: 0 4%;
+  display: flex;
+  flex-direction: row;
+  margin: auto 0;
+} */
+
+/* Add Task button */
+button {
+  margin: 0;
+  padding: 0.7rem 1.4rem;
+  cursor: pointer;
+  text-align: center;
+  border: none;
+  border-radius: 4px;
+  outline: inherit;
+  text-decoration: none;
+  background-color: rgba(174, 184, 192, 0.55);
+  color: 2C3333;
+  transition: background 350ms ease-in-out, 
+              transform 150ms ease;
+}
+
+button:hover {
+  background: #444444;
+  color: #E7F6F2;
+  transition: .2s ease-in;
+}
+
+/* Responsive CSS */
+@media (max-width: 320px) {
+  .New-Task-Form {
+    width: 280px;
+  }
+  .Task-Heading {
+    font-size: 0.8rem;
+  }
+  .Task-Heading>button {
+    width: 280px;
+  }
+  .Task-List-Container p{
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .topnav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .topnav>nav>ul{
+    width: 300px;
+  }
+  .topnav>nav>ul>li>a{
+    font-size: 0.7rem;
+  }
+  .Task-Container {
+    margin-top: 70px;
+  }
+  .Task-Heading {
+    font-size: 0.8rem;
+  }
+  .Edit-Task-Form {
+    padding: 0.5rem 1rem;
+  }
+  .Edit-Task-Form-Body {
+    grid-template-columns: 1fr;
+    padding: 0 10px;
+  }
+}
+
+@media (max-height: 426px) {}
